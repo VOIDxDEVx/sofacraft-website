@@ -1,0 +1,527 @@
+/* ========================================
+   TABLET
+======================================== */
+
+@media (max-width: 900px) {
+
+    /* NAVBAR */
+
+    .nav-links {
+        gap: 18px;
+    }
+
+
+    /* GENERAL GRIDS */
+
+    .intro-grid,
+    .section-header,
+    .why-header,
+    .process-header,
+    .gallery-preview-header,
+    .cta-container {
+        grid-template-columns: 120px 1fr;
+        gap: 40px;
+    }
+
+
+    /* WHY */
+
+    .why-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .why-card:nth-child(2) {
+        border-right: none;
+    }
+
+
+    /* DINING */
+
+    .dining-grid {
+        grid-template-columns: 1fr;
+        gap: 60px;
+    }
+
+    .dining-placeholder {
+        aspect-ratio: 16 / 10;
+    }
+
+
+    /* GALLERY */
+
+    .gallery-preview-grid {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 300px 220px 220px;
+    }
+
+    .gallery-item-large {
+        grid-row: span 2;
+    }
+
+}
+
+
+/* ========================================
+   MOBILE
+======================================== */
+
+@media (max-width: 700px) {
+
+    /* ====================================
+       CONTAINER
+    ==================================== */
+
+    .container {
+        width: min(92%, 600px);
+    }
+
+
+    /* ====================================
+       NAVBAR
+    ==================================== */
+
+    .navbar-container {
+        min-height: 70px;
+    }
+
+    .nav-wrapper {
+        position: relative;
+    }
+
+    .menu-toggle {
+        display: flex;
+    }
+
+    .nav-links {
+        display: none;
+
+        position: absolute;
+
+        top: 55px;
+        right: 0;
+
+        width: min(280px, 90vw);
+
+        padding: 25px;
+
+        background: #ffffff;
+
+        flex-direction: column;
+        align-items: stretch;
+
+        gap: 20px;
+
+        border: 1px solid #e8e3dc;
+
+        box-shadow: 0 15px 40px rgba(0, 0, 0, 0.08);
+
+        z-index: 999;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .nav-links li {
+        width: 100%;
+    }
+
+    .nav-links a {
+        display: block;
+    }
+
+    .nav-cta {
+        width: 100%;
+        text-align: center;
+    }
+
+
+    /* ====================================
+       HERO
+    ==================================== */
+
+    .hero {
+        min-height: auto;
+        padding: 90px 0;
+    }
+
+    .hero-content {
+        display: flex;
+        flex-direction: column;
+        gap: 50px;
+    }
+
+    .hero h1 {
+        font-size: clamp(3rem, 15vw, 5rem);
+    }
+
+    .hero-actions {
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 12px;
+    }
+
+    .hero-actions .btn {
+        text-align: center;
+    }
+
+
+    /* ====================================
+       GENERAL SECTIONS
+    ==================================== */
+
+    .intro-section,
+    .featured-section,
+    .why-section,
+    .process-section,
+    .dining-section,
+    .gallery-preview-section,
+    .cta-section {
+        padding: 90px 0;
+    }
+
+
+    .intro-grid,
+    .section-header,
+    .why-header,
+    .process-header,
+    .gallery-preview-header,
+    .cta-container {
+        grid-template-columns: 1fr;
+        gap: 35px;
+    }
+
+
+    /* ====================================
+       HEADINGS
+    ==================================== */
+
+    .intro-content h2,
+    .section-heading h2,
+    .why-header h2,
+    .process-header h2,
+    .dining-content h2,
+    .gallery-preview-header h2 {
+        font-size: clamp(2.5rem, 12vw, 4rem);
+    }
+
+
+    /* ====================================
+       PRODUCTS
+    ==================================== */
+
+    .product-grid {
+        grid-template-columns: 1fr;
+        gap: 45px;
+    }
+
+
+    /* ====================================
+       WHY CHOOSE US
+    ==================================== */
+
+    .why-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .why-card {
+        border-right: none;
+
+        border-bottom: 1px solid rgba(34, 34, 34, 0.2);
+
+        margin-right: 0;
+
+        padding: 30px 0;
+    }
+
+    .why-card:last-child {
+        border-bottom: none;
+    }
+
+    .why-icon {
+        margin-bottom: 25px;
+    }
+
+
+    /* ====================================
+       PROCESS
+    ==================================== */
+
+    .process-item {
+        grid-template-columns: 50px 1fr;
+        gap: 20px;
+    }
+
+    .process-content {
+        display: block;
+    }
+
+    .process-content h3 {
+        min-width: 0;
+        margin-bottom: 12px;
+    }
+
+
+    /* ====================================
+       DINING
+    ==================================== */
+
+    .dining-features {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+
+    /* ====================================
+       GALLERY
+    ==================================== */
+
+    .gallery-preview-grid {
+        grid-template-columns: 1fr;
+
+        grid-template-rows:
+            repeat(5, 280px);
+    }
+
+    .gallery-item-large {
+        grid-row: auto;
+    }
+
+
+    /* ====================================
+       CTA
+    ==================================== */
+
+    .cta-actions {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 12px;
+    }
+
+    .cta-actions a {
+        text-align: center;
+    }
+
+
+    /* ====================================
+       FOOTER
+    ==================================== */
+
+    .footer {
+        padding-top: 50px;
+    }
+
+    .footer-container {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+
+
+    /* ====================================
+       WHATSAPP
+    ==================================== */
+
+    .whatsapp-button {
+        right: 15px;
+        bottom: 15px;
+
+        padding: 12px 17px;
+    }
+
+/* ====================================
+   ABOUT PAGE
+==================================== */
+
+.page-hero {
+    padding: 100px 0;
+}
+
+.page-hero-content h1 {
+    font-size: clamp(3rem, 15vw, 5rem);
+}
+
+.about-story {
+    padding: 90px 0;
+}
+
+.about-story-grid {
+    grid-template-columns: 1fr;
+    gap: 35px;
+}
+
+.about-story-content h2 {
+    font-size: clamp(2.5rem, 12vw, 4rem);
+}
+
+.about-services {
+    padding: 90px 0;
+}
+
+.about-services-header {
+    grid-template-columns: 1fr;
+    gap: 35px;
+}
+
+.about-services-header h2 {
+    font-size: clamp(2.5rem, 12vw, 4rem);
+}
+
+.about-services-grid {
+    grid-template-columns: 1fr;
+}
+
+.about-services-grid article,
+.about-services-grid article:nth-child(odd),
+.about-services-grid article:nth-child(even) {
+    border-right: none;
+    padding: 30px 0;
+}
+
+.about-services-grid article:last-child {
+    border-bottom: none;
+}
+
+.about-cta {
+    padding: 90px 0;
+}
+
+/* ====================================
+   SOFAS PAGE
+==================================== */
+
+.sofa-collection {
+    padding: 90px 0;
+}
+
+.collection-header {
+    grid-template-columns: 1fr;
+    gap: 35px;
+}
+
+.collection-header h2 {
+    font-size: clamp(2.5rem, 12vw, 4rem);
+}
+
+.sofa-grid {
+    grid-template-columns: 1fr;
+    gap: 50px;
+}
+
+.sofa-order-section {
+    padding: 90px 0;
+}
+
+.sofa-order-section h2 {
+    font-size: clamp(2.8rem, 13vw, 5rem);
+}
+
+/* ====================================
+   DINING PAGE
+==================================== */
+
+.dining-collection {
+    padding: 90px 0;
+}
+
+.dining-product-grid {
+    grid-template-columns: 1fr;
+    gap: 50px;
+}
+
+.dining-order-section {
+    padding: 90px 0;
+}
+
+.dining-order-section h2 {
+    font-size: clamp(2.8rem, 13vw, 5rem);
+}
+
+/* ====================================
+   FULL GALLERY PAGE
+==================================== */
+
+.full-gallery-section {
+    padding: 70px 0 90px;
+}
+
+.gallery-filter {
+    overflow-x: auto;
+
+    padding-bottom: 15px;
+
+    margin-bottom: 40px;
+}
+
+.gallery-filter-btn {
+    flex-shrink: 0;
+}
+
+.full-gallery-grid {
+    grid-template-columns: 1fr;
+
+    grid-auto-rows: 280px;
+}
+
+.full-gallery-item.gallery-large {
+    grid-row: auto;
+}
+
+.gallery-cta {
+    padding: 90px 0;
+}
+
+.gallery-cta h2 {
+    font-size: clamp(2.8rem, 13vw, 5rem);
+}
+
+/* ====================================
+   CONTACT PAGE
+==================================== */
+
+.contact-section {
+    padding: 90px 0;
+}
+
+.contact-grid {
+    grid-template-columns: 1fr;
+
+    gap: 60px;
+}
+
+.contact-info h2 {
+    font-size: clamp(2.5rem, 12vw, 4rem);
+}
+
+.contact-form-wrapper {
+    padding: 25px;
+}
+
+.contact-process {
+    padding: 90px 0;
+}
+
+.contact-process-header {
+    grid-template-columns: 1fr;
+
+    gap: 35px;
+}
+
+.contact-process-header h2 {
+    font-size: clamp(2.5rem, 12vw, 4rem);
+}
+
+.contact-process-grid {
+    grid-template-columns: 1fr;
+}
+
+.contact-process-grid > div,
+.contact-process-grid > div:not(:last-child) {
+    border-right: none;
+
+    margin-right: 0;
+
+    padding: 30px 0;
+}
+
+}
